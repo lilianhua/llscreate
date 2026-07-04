@@ -1,0 +1,15 @@
+{
+  "name": "vue",
+  "description": "Vue 3 + Vite + TypeScript 最小启动模板",
+  "category": "frontend",
+  "tags": ["vue", "vite", "typescript"],
+  "prompts": [
+    {
+      "name": "authorName",
+      "type": "input",
+      "message": "作者名（用于 README / package.json）",
+      "default": "Anonymous"
+    }
+  ],
+  "ignore": []
+}

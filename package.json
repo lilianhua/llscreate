@@ -1,0 +1,78 @@
+{
+  "name": "llscreate",
+  "version": "0.1.0",
+  "description": "llscreate - 以最快速度创建 vue / react / next / ts 项目",
+  "type": "module",
+  "author": "lilianhua",
+  "license": "MIT",
+  "homepage": "https://github.com/lilianhua/llscreate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilianhua/llscreate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lilianhua/llscreate/issues"
+  },
+  "bin": {
+    "llscreate": "./bin/llscreate.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "bin",
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup",
+    "lint": "biome check src",
+    "format": "biome format --write src",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "cli",
+    "scaffold",
+    "template",
+    "boilerplate",
+    "starter",
+    "create",
+    "generator",
+    "vue",
+    "react",
+    "next",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
+    "cac": "^6.7.14",
+    "ejs": "^3.1.10",
+    "fs-extra": "^11.2.0",
+    "giget": "^2.0.0",
+    "ora": "^8.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/ejs": "^3.1.5",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.9.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.6"
+  }
+}

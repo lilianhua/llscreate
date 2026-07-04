@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+.env.local
+coverage/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+# 本地测试生成的项目
+my-test-app/
+test-output/

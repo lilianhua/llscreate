@@ -1,0 +1,15 @@
+{
+  "name": "ts",
+  "description": "可直接 tsx 运行的 TypeScript 最小工程",
+  "category": "library",
+  "tags": ["typescript", "tsx", "node"],
+  "prompts": [
+    {
+      "name": "authorName",
+      "type": "input",
+      "message": "作者名（用于 README / package.json）",
+      "default": "Anonymous"
+    }
+  ],
+  "ignore": []
+}
