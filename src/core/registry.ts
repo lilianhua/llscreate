@@ -1,6 +1,6 @@
+import { existsSync } from 'node:fs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { existsSync } from 'node:fs';
 import { builtinTemplatesDir } from '../utils/paths.js';
 import { getCacheDirFor, loadConfig } from './config.js';
 import type { TemplateConfig, TemplateEntry } from './types.js';

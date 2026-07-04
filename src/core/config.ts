@@ -1,7 +1,7 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import os from 'node:os';
 import { existsSync } from 'node:fs';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
 
 export interface TemplateSource {
   alias: string;
@@ -85,7 +85,9 @@ export async function addSource(alias: string, url: string): Promise<LlscreateCo
   return next;
 }
 
-export async function removeSource(alias: string): Promise<{ config: LlscreateConfig; removed: boolean }> {
+export async function removeSource(
+  alias: string,
+): Promise<{ config: LlscreateConfig; removed: boolean }> {
   const config = await loadConfig();
   const before = config.sources.length;
   const filtered = config.sources.filter((s) => s.alias !== alias);

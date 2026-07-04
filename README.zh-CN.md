@@ -40,6 +40,9 @@ llscreate vue my-app
 llscreate react my-app
 llscreate next my-app
 llscreate ts my-app
+llscreate java my-app
+llscreate go my-app
+llscreate rust my-app
 
 llscreate list      # 列出所有可用模板（内置 + 远程）
 ```
@@ -58,6 +61,9 @@ llscreate list      # 列出所有可用模板（内置 + 远程）
 | `react` | React 19 + Vite + TypeScript |
 | `next` | Next.js 15（App Router）+ TypeScript |
 | `ts` | TypeScript + tsx（直接可运行） |
+| `java` | Maven + JDK 21 |
+| `go` | Go 1.23 |
+| `rust` | Rust + Cargo（Edition 2021） |
 
 ## 远程模板仓库（sources）
 
@@ -180,9 +186,8 @@ giget 拉取仓库时会自动剥离 tarball 的顶层目录。这恰好匹配 G
 
 ## 路线图
 
-- [x] 内置模板：`vue`、`react`、`next`、`ts`
+- [x] 内置模板：`vue`、`react`、`next`、`ts`、`java`、`go`、`rust`
 - [x] 远程模板仓库（`source add/remove/list/update`）
-- [ ] 内置模板：`java`、`go`、`rust`
 - [ ] 私有仓库鉴权（`--token` 参数）
 - [ ] 模板 hooks（`preCopy` / `postCopy`）
 

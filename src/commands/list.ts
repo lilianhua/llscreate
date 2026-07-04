@@ -1,7 +1,7 @@
 import { loadConfig } from '../core/config.js';
 import { colors, log } from '../core/logger.js';
-import { getSourceCacheDir } from '../core/sources.js';
 import { listAllTemplates } from '../core/registry.js';
+import { getSourceCacheDir } from '../core/sources.js';
 
 export interface ListArgs {
   category?: string;
@@ -44,9 +44,7 @@ export async function listCommand(args: ListArgs = {}): Promise<void> {
 
   for (const alias of missingSources) {
     log.raw(colors.bold(colors.yellow(`● ${alias}`)));
-    log.raw(
-      colors.yellow(`  cache missing — 运行：llscreate source update ${alias}`),
-    );
+    log.raw(colors.yellow(`  cache missing — 运行：llscreate source update ${alias}`));
     log.raw('');
   }
 }

@@ -1,0 +1,16 @@
+{
+  "name": "java",
+  "description": "Maven + JDK 21 最小启动模板",
+  "category": "backend",
+  "tags": ["java", "maven"],
+  "prompts": [
+    {
+      "name": "authorName",
+      "type": "input",
+      "message": "作者名（用于 README / pom.xml）",
+      "default": "Anonymous"
+    }
+  ],
+  "hints": ["mvn compile", "mvn exec:java"],
+  "ignore": []
+}

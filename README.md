@@ -40,6 +40,9 @@ llscreate vue my-app
 llscreate react my-app
 llscreate next my-app
 llscreate ts my-app
+llscreate java my-app
+llscreate go my-app
+llscreate rust my-app
 
 llscreate list      # show all available templates (built-in + remote)
 ```
@@ -58,6 +61,9 @@ Flags:
 | `react` | React 19 + Vite + TypeScript |
 | `next` | Next.js 15 (App Router) + TypeScript |
 | `ts` | TypeScript + tsx (directly runnable) |
+| `java` | Maven + JDK 21 |
+| `go` | Go 1.23 |
+| `rust` | Rust + Cargo (Edition 2021) |
 
 ## Remote template sources
 
@@ -180,9 +186,8 @@ Environment variables:
 
 ## Roadmap
 
-- [x] Built-in templates: `vue`, `react`, `next`, `ts`
+- [x] Built-in templates: `vue`, `react`, `next`, `ts`, `java`, `go`, `rust`
 - [x] Remote template sources (`source add/remove/list/update`)
-- [ ] Built-in templates: `java`, `go`, `rust`
 - [ ] Private repo auth (`--token` flag)
 - [ ] Template hooks (`preCopy` / `postCopy`)
 

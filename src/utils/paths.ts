@@ -1,6 +1,6 @@
-import { fileURLToPath } from 'node:url';
-import path from 'node:path';
 import { existsSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 /**
  * 解析本包的根目录。

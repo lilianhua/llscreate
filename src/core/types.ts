@@ -26,6 +26,8 @@ export interface TemplateConfig {
   prompts?: PromptSpec[];
   ignore?: string[];
   hooks?: TemplateHooks;
+  /** 生成后打印的下一步提示。不设则默认走 `${pm} install` + `${pm} run dev`。 */
+  hints?: string[];
 }
 
 export interface TemplateEntry {

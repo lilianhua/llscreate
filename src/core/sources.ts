@@ -1,6 +1,6 @@
-import { downloadTemplate } from 'giget';
-import fs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import fs from 'node:fs/promises';
+import { downloadTemplate } from 'giget';
 import { getCacheDirFor } from './config.js';
 
 /**

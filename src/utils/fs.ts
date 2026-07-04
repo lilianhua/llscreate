@@ -1,5 +1,5 @@
-import fs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import fs from 'node:fs/promises';
 
 export async function isDirectoryEmpty(dir: string): Promise<boolean> {
   if (!existsSync(dir)) return true;

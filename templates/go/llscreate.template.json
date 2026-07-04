@@ -1,0 +1,16 @@
+{
+  "name": "go",
+  "description": "Go 1.23 最小启动模板",
+  "category": "backend",
+  "tags": ["go"],
+  "prompts": [
+    {
+      "name": "authorName",
+      "type": "input",
+      "message": "作者名（用于 README）",
+      "default": "Anonymous"
+    }
+  ],
+  "hints": ["go run main.go"],
+  "ignore": []
+}

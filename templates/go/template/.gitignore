@@ -1,0 +1,16 @@
+# Binary
+*.exe
+*.dll
+*.so
+*.dylib
+<%= projectName %>
+
+# Test
+*.test
+*.out
+coverage.txt
+
+# Editor
+.idea/
+.vscode/
+.DS_Store

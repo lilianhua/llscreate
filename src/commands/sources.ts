@@ -87,10 +87,7 @@ export async function sourcesUpdateCommand(args: SourcesUpdateArgs): Promise<voi
       spin.succeed(`已刷新 ${colors.cyan(s.alias)}`);
     } catch (err) {
       spin.fail(`刷新 ${s.alias} 失败`);
-      log.error(
-        `无法拉取：${s.url}`,
-        process.env.LLSCREATE_DEBUG ? err : (err as Error)?.message,
-      );
+      log.error(`无法拉取：${s.url}`, process.env.LLSCREATE_DEBUG ? err : (err as Error)?.message);
     }
   }
 }

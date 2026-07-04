@@ -1,7 +1,7 @@
+import { existsSync } from 'node:fs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { existsSync } from 'node:fs';
-import { renderFilename, renderString, type RenderContext } from './render.js';
+import { type RenderContext, renderFilename, renderString } from './render.js';
 
 export interface GenerateOptions {
   /** 模板根目录（包含 template/ 子目录和 llscreate.template.json） */
@@ -74,6 +74,12 @@ const TEXT_DOTFILES = new Set([
   '.eslintrc',
   '.prettierrc',
   '.dockerignore',
+  // 无扩展名的常见配置文件
+  'go.mod',
+  'go.sum',
+  'Dockerfile',
+  'Makefile',
+  'Procfile',
 ]);
 
 export async function generate(opts: GenerateOptions): Promise<GenerateResult> {

@@ -1,0 +1,16 @@
+{
+  "name": "rust",
+  "description": "Cargo + Edition 2021 最小启动模板",
+  "category": "backend",
+  "tags": ["rust", "cargo"],
+  "prompts": [
+    {
+      "name": "authorName",
+      "type": "input",
+      "message": "作者名（用于 Cargo.toml）",
+      "default": "Anonymous"
+    }
+  ],
+  "hints": ["cargo run"],
+  "ignore": []
+}

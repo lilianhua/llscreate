@@ -84,8 +84,8 @@ export async function createCommand(args: CreateArgs): Promise<void> {
   log.raw('');
   log.raw(colors.dim('  接下来：'));
   log.raw(`    cd ${projectName}`);
-  log.raw(`    ${packageManager} install`);
-  log.raw(`    ${packageManager} run dev`);
+  const hints = template.config.hints ?? [`${packageManager} install`, `${packageManager} run dev`];
+  for (const h of hints) log.raw(`    ${h}`);
 }
 
 async function resolveTemplate(templateArg: string): Promise<TemplateEntry> {
@@ -94,14 +94,17 @@ async function resolveTemplate(templateArg: string): Promise<TemplateEntry> {
     log.error(`找不到模板：${templateArg}`);
     const all = await listAllTemplates();
     if (all.length > 0) {
-      log.raw(colors.dim('  可用模板：' + all.map((x) => x.id).join(', ')));
+      log.raw(colors.dim(`  可用模板：${all.map((x) => x.id).join(', ')}`));
     }
     process.exit(1);
   }
   return t;
 }
 
-async function resolveProjectName(nameArg: string | undefined, yes: boolean): Promise<string | null> {
+async function resolveProjectName(
+  nameArg: string | undefined,
+  yes: boolean,
+): Promise<string | null> {
   if (nameArg) {
     if (!isValidNpmName(nameArg)) {
       log.error(`无效的项目名（需符合 npm 包名规范）：${nameArg}`);
@@ -123,7 +126,11 @@ async function resolveProjectName(nameArg: string | undefined, yes: boolean): Pr
   return name;
 }
 
-async function ensureTargetDir(targetDir: string, projectName: string, yes: boolean): Promise<void> {
+async function ensureTargetDir(
+  targetDir: string,
+  projectName: string,
+  yes: boolean,
+): Promise<void> {
   const empty = await isDirectoryEmpty(targetDir);
   if (empty) return;
 

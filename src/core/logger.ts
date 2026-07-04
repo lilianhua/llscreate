@@ -1,5 +1,5 @@
-import colors from 'picocolors';
 import ora, { type Ora } from 'ora';
+import colors from 'picocolors';
 
 type Level = 'debug' | 'info' | 'warn' | 'error' | 'silent';
 
